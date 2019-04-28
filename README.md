@@ -8,7 +8,7 @@
 
 ### 拉取镜像
 
-    docker pull kigawas/docker-thunder-xware:latest
+    docker pull kigawas/thunder-xware:latest
 
 ### 创建一个下载目录. 用于挂载卷
 
@@ -20,15 +20,15 @@
             --name=xware \
             --net=host \
             -v $(pwd)/data:/app/TDDOWNLOAD \
-            kigawas/docker-thunder-xware
+            kigawas/thunder-xware
 
 ### 查看运行情况
 
     docker ps
 
     // output:
-    CONTAINER ID        IMAGE                                 COMMAND             CREATED             STATUS              PORTS               NAMES
-    c8a3d047af71        kigawas/docker-thunder-xware:latest   "./start.sh"        4 seconds ago       Up 3 seconds                            xware
+    CONTAINER ID        IMAGE                           COMMAND             CREATED             STATUS              PORTS               NAMES
+    c8a3d047af71        kigawas/thunder-xware:latest   "./start.sh"        4 seconds ago       Up 3 seconds                            xware
 
 ### 查看日志(激活码)/到迅雷增加设备
 
